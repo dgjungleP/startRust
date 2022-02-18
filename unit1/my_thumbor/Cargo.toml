@@ -1,8 +1,27 @@
 [package]
+edition = "2021"
 name = "my_thumbor"
 version = "0.1.0"
-edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = "1" #error handle
+axum = "0.4.5" #web server
+base64 = "0.13" #base64 encoded and decoded
+bytes = "1" #byte stream handle
+image = "0.24.0" #image handle
+lazy_static = "1" #static handle
+lru = "0.7.2" #lru cache 
+percent-encoding = "2" #url encoding and decoded
+photon-rs = "0.3" #image effect
+prost = "0.9.0" #protobuf handle
+reqwest = "0.11" #http client
+serde = {version = "1", features = ["derive"]}#serialize             
+tokio = {version = "1", features = ["full"]}# synchronized           
+tower = {version = "0.4", features = ["util", "timeout", "load-shed", "limit"]}#service handle         
+tower-http = {version = "0.2.2", features = ["add-extension", "compression-full", "trace"]}#http  middleware       
+tracing = "0.1" # log and track
+tracing-subscriber = "0.3.9" #log and track
+[build-dependencies]
+prost-build = "0.9.0"
