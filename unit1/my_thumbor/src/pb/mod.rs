@@ -84,9 +84,6 @@ mod test {
         let spec2 = Spec::new_filter(filter::Filter::Marine);
         let image_spec = ImageSpec::new(vec![spec1, spec2]);
         let s: String = image_spec.borrow().into();
-        println!("{:?}", image_spec);
-        println!("{}", s);
-
         assert_eq!(image_spec, s.as_str().try_into().unwrap());
     }
 }
