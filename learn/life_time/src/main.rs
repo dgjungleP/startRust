@@ -1,11 +1,9 @@
 fn main() {
     let string1 = String::from("abcd");
     let result;
-    {
-        let string2 = String::from("kkk");
+    let string2 = String::from("kkk");
 
-        result = longest(string1.as_str(), string2.as_str());
-    }
+    result = longest(string1.as_str(), string2.as_str());
     println!("The longest string is {}", result);
 }
 
