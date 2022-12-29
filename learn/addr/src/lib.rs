@@ -32,6 +32,7 @@ mod tests {
     #[test]
     #[should_panic]
     fn another() {
+        println!("Hello world");
         panic!("Make this test faild");
     }
     #[test]
