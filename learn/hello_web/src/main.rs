@@ -11,7 +11,7 @@ fn main() {
     let listen = TcpListener::bind("127.0.0.1:7788").unwrap();
     let pool = ThreadPool::new(4);
 
-    for stream in listen.incoming() {
+    for stream in listen.incoming().take(6) {
         let stream = stream.unwrap();
         pool.excute(|| {
             handle_connection(stream);
